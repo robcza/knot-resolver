@@ -15,6 +15,10 @@ mock_cmodule_mod = shared_module(
 )
 
 # executables with tests
+unit_tests += [
+  ['ecs_test', files('ecs_test.c')],
+]
+
 foreach unit_test : unit_tests
   exec_test = executable(
     unit_test[0],
